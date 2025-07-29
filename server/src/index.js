@@ -11,12 +11,7 @@ dotenv.config();
 const PORT = process.env.PORT;
 
 app.use(express.json());
-app.use(
-  cors({
-    origin: "https://pointify-clinet.vercel.app/",
-    credentials: true,
-  })
-);
+app.use(cors())
 
 app.use("/api/user", userRoutes);
 
