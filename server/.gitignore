@@ -1,0 +1,9 @@
+node_modules
+
+.env
+*.sublime-workspace
+*.sublime-project
+*.code-workspace
+*.vscode
+*.swp
+*.swo
