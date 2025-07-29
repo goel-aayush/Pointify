@@ -5,6 +5,7 @@ import Ranks from "./pages/Ranks";
 import Add from "./pages/Add";
 import { Toaster } from "react-hot-toast";
 import Navbar from "./components/Navbar";
+import Leaderboard from "./pages/Leaderboard";
 
 const App = () => {
   return (
@@ -12,7 +13,7 @@ const App = () => {
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/ranking" element={<Ranks />} />
+        <Route path="/ranking" element={<Leaderboard />} />
         <Route path="/addnew" element={<Add />} />
       </Routes>
       <Toaster />

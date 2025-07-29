@@ -69,6 +69,9 @@ export const score = async (req, res) => {
     // Save the updated user
     await user.save();
 
+    const io = req.app.get("io");
+    io.emit("pointsUpdated", { fullName, points });
+
     return res.status(200).json({
       message: "User points updated successfully",
       updatedUser: user,

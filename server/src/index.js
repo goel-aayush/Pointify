@@ -4,9 +4,9 @@ import cors from "cors";
 
 import { connectDB } from "./lib/db.js";
 import userRoutes from "./routes/user.route.js";
-// import { app, server } from "./lib/socket.js";
+import { app, server } from "./lib/socket.js";
 dotenv.config();
-const app = express();
+// const app = express();
 
 const PORT = process.env.PORT;
 
@@ -20,7 +20,7 @@ app.use(
 
 app.use("/api/user", userRoutes);
 
-app.listen(PORT, () => {
+server.listen(PORT, () => {
   console.log(`server is running on ${PORT}`);
   connectDB();
 });
